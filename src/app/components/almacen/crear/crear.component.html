@@ -1,0 +1,17 @@
+<div class="formMedicamentos">
+    <h1 mat-dialog-title>Agregar | Modificar Almacen</h1>
+    <div mat-dialog-content>
+        <mat-form-field>
+            
+            <mat-label>Codigo Medicamento</mat-label>
+            <mat-select [(ngModel)]="data.codigoMedicamento">
+              <mat-option *ngFor="let medicamento of medicamentos" [value]="medicamento.codigo">{{ medicamento.codigo }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="saveData()" class="button-save">Guardar</button>
+    </div>
+</div>
